@@ -10,21 +10,25 @@ flatpak install -y com.slack.Slack
 flatpak install -y org.telegram.desktop
 flatpak install -y com.anydesk.Anydesk
 flatpak install -y org.darktable.Darktable
-flatpak install -y com.rawtherapee.Rawtherapee
+flatpak install -y com.rawtherapee.RawTherapee
 flatpak install -y com.logseq.Logseq
 flatpak install -y org.rncbc.qpwgraph
 flatpak install -y fm.reaper.Reaper
 flatpak install -y org.gnome.Boxes
 flatpak install -y io.github.vikdevelop.SaveDesktop
 
-read -p "Github password: " GITHUB_PASSWORD
-
-git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/dotfiles.git ~/Dotfiles/
+until read -p "Github password: " GITHUB_PASSWORD && git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/dotfiles.git ~/Dotfiles/
+do
+    echo "Git clone failed, likely invalid password, try again"
+done
 cd ~/Dotfiles
-stow .
+stow --adopt .
+git restore .
 cd
 
-git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/piiq-dev.git /home/templarrr/Development/piiq-dev
+git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/piiq-dev.git /home/templarrr/Development/piiq-dev-containers
 
-read -p "Bitbucket password: " BITBUCKET_PASSWORD
-git clone https://artyom_smushkov:${BITBUCKET_PASSWORD}@bitbucket.org/piiqmedia/piiq-media.git
+until read -p "Bitbucket password: " BITBUCKET_PASSWORD && git clone https://artyom_smushkov:${BITBUCKET_PASSWORD}@bitbucket.org/piiqmedia/piiq-media.git /home/templarrr/Development/piiq-src
+do
+    echo "Git clone failed, likely invalid password, try again"
+done
