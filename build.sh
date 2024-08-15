@@ -24,4 +24,4 @@ rpm-ostree install foot emacs stow
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-systemctl enable docker.socket
+systemctl enable docker.service

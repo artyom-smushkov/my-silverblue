@@ -48,8 +48,8 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-COPY post-install.sh /usr/local/bin/post-install.sh
-RUN chmod +x /usr/local/bin/post-install.sh && \
+COPY post-install.sh /tmp/post-install.sh
+RUN install -o 0 -g 0 -m755 /tmp/post-install.sh /usr/local/bin/post-install.sh && \
     ostree container commit
 
 COPY build.sh /tmp/build.sh

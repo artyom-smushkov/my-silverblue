@@ -15,6 +15,7 @@ flatpak install -y com.logseq.Logseq
 flatpak install -y org.rncbc.qpwgraph
 flatpak install -y fm.reaper.Reaper
 flatpak install -y org.gnome.Boxes
+flatpak install -y io.github.vikdevelop.SaveDesktop
 
 
 git clone https://github.com/artyom-smushkov/dotfiles.git ~/Dotfiles/
