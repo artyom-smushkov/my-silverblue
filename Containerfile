@@ -51,8 +51,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 COPY system-files /tmp/system-files
 RUN ostree commit \
     -b custom-os-layer \
-    --tree-dir=/tmp/system-files
-    --commit-ancestor=existing-branch
+    --tree=dir=/tmp/system-files
     --subject="Add custom files"
 
 COPY build.sh /tmp/build.sh
