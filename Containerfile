@@ -49,10 +49,8 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY system-files /tmp/system-files
-RUN ostree commit \
-    -b custom-os-layer \
-    --tree=dir=/tmp/system-files
-    --subject="Add custom files"
+RUN rsync -rvK /tmp/system-files/ / && \
+    ostree container commit
 
 COPY build.sh /tmp/build.sh
 
