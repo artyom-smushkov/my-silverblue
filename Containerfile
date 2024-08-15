@@ -49,8 +49,8 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY post-install.sh /tmp/post-install.sh
-RUN mkdir -p /usr/local/bin/ && \
-    install -o 0 -g 0 -m755 /tmp/post-install.sh /usr/local/bin/post-install.sh && \
+COPY system-files /tmp/system-files
+RUN rsync -rvK /tmp/system-files/ / \
     ostree container commit
 
 COPY build.sh /tmp/build.sh
