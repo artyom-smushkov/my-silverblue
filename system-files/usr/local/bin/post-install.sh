@@ -16,8 +16,9 @@ flatpak install -y org.rncbc.qpwgraph
 flatpak install -y fm.reaper.Reaper
 flatpak install -y org.gnome.Boxes
 flatpak install -y io.github.vikdevelop.SaveDesktop
+flatpak install -y org.gnome.Geary
 
-until read -p "Github password: " GITHUB_PASSWORD && git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/dotfiles.git ~/Dotfiles/
+until read -s -p "Github password: " GITHUB_PASSWORD && git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/dotfiles.git ~/Dotfiles/
 do
     echo "Git clone failed, likely invalid password, try again"
 done
@@ -28,7 +29,7 @@ cd
 
 git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/piiq-dev.git /home/templarrr/Development/piiq-dev-containers
 
-until read -p "Bitbucket password: " BITBUCKET_PASSWORD && git clone https://artyom_smushkov:${BITBUCKET_PASSWORD}@bitbucket.org/piiqmedia/piiq-media.git /home/templarrr/Development/piiq-src
+until read -s -p "Bitbucket password: " BITBUCKET_PASSWORD && git clone https://artyom_smushkov:${BITBUCKET_PASSWORD}@bitbucket.org/piiqmedia/piiq-media.git /home/templarrr/Development/piiq-src
 do
     echo "Git clone failed, likely invalid password, try again"
 done
