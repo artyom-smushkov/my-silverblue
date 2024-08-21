@@ -5,18 +5,7 @@ flatpak override --user --filesystem=~/.icons/
 flatpak override --user --filesystem=xdg-config/gtk-4.0
 flatpak override --user --filesystem=xdg-config/gtk-3.0
 
-flatpak install -y com.bitwarden.desktop
-flatpak install -y com.slack.Slack
-flatpak install -y org.telegram.desktop
-flatpak install -y com.anydesk.Anydesk
-flatpak install -y org.darktable.Darktable
-flatpak install -y com.rawtherapee.RawTherapee
-flatpak install -y com.logseq.Logseq
-flatpak install -y org.rncbc.qpwgraph
-flatpak install -y fm.reaper.Reaper
-flatpak install -y org.gnome.Boxes
-flatpak install -y io.github.vikdevelop.SaveDesktop
-flatpak install -y org.gnome.Geary
+daily_install.sh
 
 until read -s -p "Github password: " GITHUB_PASSWORD && git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/dotfiles.git ~/Dotfiles/
 do

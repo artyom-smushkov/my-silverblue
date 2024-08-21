@@ -25,3 +25,4 @@ rpm-ostree install foot stow kitty podman-compose
 
 systemctl enable podman.socket
 systemctl enable docker.service
+systemctl enable daily-sync-changes.timer

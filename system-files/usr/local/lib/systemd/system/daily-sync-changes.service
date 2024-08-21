@@ -1,0 +1,10 @@
+[Unit]
+Description=Auto sync changes to config and installed flatpaks
+After=local-fs.target
+After=network-online.target
+
+[Service]
+# Override the user if different UID/User
+User=1000
+Type=oneshot
+ExecStart=/usr/local/bin/daily-sync-changes.sh
