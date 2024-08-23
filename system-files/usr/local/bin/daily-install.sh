@@ -12,3 +12,4 @@ flatpak install -y fm.reaper.Reaper
 flatpak install -y org.gnome.Boxes
 flatpak install -y io.github.vikdevelop.SaveDesktop
 flatpak install -y org.gnome.Geary
+flatpak install -y me.kozec.syncthingtk
