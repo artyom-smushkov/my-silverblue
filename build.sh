@@ -18,7 +18,7 @@ rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm-ostree install foot stow podman-compose syncthing
+rpm-ostree install foot stow podman-compose syncthing steam
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
