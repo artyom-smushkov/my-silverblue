@@ -19,7 +19,6 @@ rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 
 # this installs a package from fedora repos
 rpm-ostree install foot stow podman-compose syncthing
-rpm-ostree remove solaar
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
