@@ -57,6 +57,8 @@ COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
+RUN rpm-ostree install mullvad-vpn && \
+    ostree container commit
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
