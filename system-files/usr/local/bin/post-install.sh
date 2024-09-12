@@ -31,3 +31,5 @@ done
 
 systemctl --user enable syncthing.service
 systemctl --user start syncthing.service
+
+rpm-ostree install mullvad-vpn
