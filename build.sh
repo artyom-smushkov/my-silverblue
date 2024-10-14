@@ -24,7 +24,7 @@ rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm-ostree install foot stow podman-compose syncthing fish emacs rofi-wayland swww SwayNotificationCenter qtile qtile-wayland qtile-extras alacritty xdg-desktop-portal-wlr swappy dfu-util waybar
+rpm-ostree install foot stow podman-compose syncthing fish emacs rofi-wayland swww SwayNotificationCenter qtile qtile-wayland qtile-extras alacritty xdg-desktop-portal-wlr swappy dfu-util waybar river
 rpm-ostree override remove solaar
 
 # this would install a package from rpmfusion
