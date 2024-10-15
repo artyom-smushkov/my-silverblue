@@ -19,23 +19,9 @@ rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 ### Install packages
 
 rpm-ostree install foot stow podman-compose syncthing fish emacs rofi-wayland swww SwayNotificationCenter qtile qtile-wayland qtile-extras alacritty xdg-desktop-portal-wlr swappy dfu-util waybar river libvterm
-# rpm-ostree override remove solaar
+rpm-ostree override remove solaar
 
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
 systemctl enable docker.service
-
-# Homebrew
-# Convince the installer we are in CI
-touch /.dockerenv
-
-# Make these so script will work
-mkdir -p /var/home
-mkdir -p /var/roothome
-
-# Brew Install Script
-curl -Lo /tmp/brew-install https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-chmod +x /tmp/brew-install
-/tmp/brew-install
-tar --zstd -cvf /usr/share/homebrew.tar.zst /home/linuxbrew/.linuxbrew
