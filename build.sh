@@ -19,7 +19,7 @@ rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 ### Install packages
 
 rpm-ostree install foot stow podman-compose syncthing fish emacs rofi-wayland swww SwayNotificationCenter qtile qtile-wayland qtile-extras alacritty xdg-desktop-portal-wlr swappy dfu-util waybar river libvterm
-rpm-ostree override remove solaar
+# rpm-ostree override remove solaar
 
 #### Example for enabling a System Unit File
 
