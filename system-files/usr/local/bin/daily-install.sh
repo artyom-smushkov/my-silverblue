@@ -14,7 +14,3 @@ flatpak install -y me.kozec.syncthingtk
 flatpak install -y org.gnome.Lollypop
 flatpak install -y org.kde.kid3
 flatpak install -y io.github.zen_browser.zen
-
-brew update
-brew bundle install --cleanup --file /var/home/templarrr/.config/brewfile/Brewfile --no-lock
-brew upgrade
