@@ -15,6 +15,7 @@ rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 ### Install packages
 
 rpm-ostree install foot stow podman-compose syncthing emacs rofi-wayland swww qtile qtile-wayland qtile-extras xdg-desktop-portal-wlr swappy waybar python3-lsp-server+all
+rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland
 # rpm-ostree override remove solaar
 
 #### Example for enabling a System Unit File
