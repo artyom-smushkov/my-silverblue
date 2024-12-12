@@ -1,16 +1,41 @@
 #!/bin/bash
 
-flatpak install -y com.bitwarden.desktop
-flatpak install -y com.slack.Slack
-flatpak install -y org.telegram.desktop
-flatpak install -y com.anydesk.Anydesk
-flatpak install -y org.darktable.Darktable
-flatpak install -y com.rawtherapee.RawTherapee
-flatpak install -y org.rncbc.qpwgraph
-flatpak install -y fm.reaper.Reaper
-flatpak install -y org.gnome.Boxes
-flatpak install -y org.gnome.Geary
-flatpak install -y me.kozec.syncthingtk
-flatpak install -y org.gnome.Lollypop
-flatpak install -y org.kde.kid3
-flatpak install -y io.github.zen_browser.zen
+DESIRED_FLATPAKS_PROGRAMS=$(
+echo "com.bitwarden.desktop
+com.slack.Slack
+org.telegram.desktop
+com.anydesk.Anydesk
+org.darktable.Darktable
+org.rncbc.qpwgraph
+fm.reaper.Reaper
+org.gnome.Boxes
+org.gnome.Geary
+org.kde.kid3
+io.github.zen_browser.zen
+com.brave.Browser
+io.mpv.Mpv
+com.spotify.Client
+org.pulseaudio.pavucontrol
+org.mozilla.firefox
+org.tigervnc.vncviewer
+com.github.tchx84.Flatseal
+org.audacityteam.Audacity"
+)
+
+CURRENT_FLATPAK_PROGRAMS=$(flatpak list --app --columns=application)
+
+for app in $DESIRED_FLATPAKS_PROGRAMS; do
+    if ! echo "$CURRENT_FLATPAK_PROGRAMS" | grep -q "$app"; then
+	echo "Installing $app..."
+	flatpak install -y "${app}"
+    fi
+done
+
+echo $DESIRED_FLATPAKS_PROGRAMS
+
+for app in $CURRENT_FLATPAK_PROGRAMS; do
+    if ! echo $DESIRED_FLATPAKS_PROGRAMS | grep -q "$app"; then
+	echo "Removing $app..."
+	flatpak uninstall -y "${app}"
+    fi
+done
