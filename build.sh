@@ -27,12 +27,11 @@ systemctl enable podman.socket
 systemctl enable docker.service
 
 # Homebrew
-# Convince the installer we are in CI
-touch /.dockerenv
 
 # Make these so script will work
 mkdir -p /var/home
 mkdir -p /var/roothome
+ln -s /var/home /home
 
 # Brew Install Script
 curl -Lo /tmp/brew-install https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
