@@ -25,3 +25,16 @@ rpm-ostree install gnome-keyring
 
 systemctl enable podman.socket
 systemctl enable docker.service
+
+# Homebrew
+# Convince the installer we are in CI
+touch /.dockerenv
+
+# Make these so script will work
+mkdir -p /var/home
+mkdir -p /var/roothome
+
+# Brew Install Script
+curl -Lo /tmp/brew-install https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+chmod +x /tmp/brew-install
+/tmp/brew-install
