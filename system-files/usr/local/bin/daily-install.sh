@@ -9,7 +9,7 @@ org.darktable.Darktable
 org.rncbc.qpwgraph
 fm.reaper.Reaper
 org.gnome.Boxes
-org.gnome.Geary
+org.mozilla.Thunderbird
 org.kde.kid3
 io.github.zen_browser.zen
 com.brave.Browser
