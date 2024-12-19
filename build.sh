@@ -16,7 +16,7 @@ rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 
 ### Install packages
 
-rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww qtile qtile-wayland qtile-extras xdg-desktop-portal-wlr swappy waybar
+rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww qtile qtile-wayland qtile-extras xdg-desktop-portal-wlr swappy waybar emacs
 rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter
 rpm-ostree install gnome-keyring
 # rpm-ostree override remove solaar
