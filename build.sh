@@ -25,6 +25,7 @@ rpm-ostree install gnome-keyring
 
 systemctl enable podman.socket
 systemctl enable docker.service
+systemctl enable brew-setup.service
 
 # Make these so script will work
 mkdir -p /var/home
