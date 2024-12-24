@@ -19,7 +19,8 @@ org.pulseaudio.pavucontrol
 org.mozilla.firefox
 org.tigervnc.vncviewer
 com.github.tchx84.Flatseal
-org.audacityteam.Audacity"
+org.audacityteam.Audacity
+md.obsidian.Obsidian"
 )
 
 CURRENT_FLATPAK_PROGRAMS=$(flatpak list --app --columns=application)
