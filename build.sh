@@ -19,7 +19,6 @@ dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-co
 dnf install foot stow podman-compose syncthing rofi-wayland swww qtile qtile-wayland qtile-extras xdg-desktop-portal-wlr swappy waybar emacs fish
 dnf install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter
 dnf install gnome-keyring
-dnf install mullvad-vpn
 # dnf override remove solaar
 
 #### Example for enabling a System Unit File
