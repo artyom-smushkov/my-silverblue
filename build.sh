@@ -20,7 +20,7 @@ dnf install foot stow podman-compose syncthing rofi-wayland swww qtile qtile-way
 dnf install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter
 dnf install gnome-keyring
 dnf install mozilla-fira-sans-fonts
-dnf install @base-x
+dnf group install base-x
 # dnf override remove solaar
 
 #### Example for enabling a System Unit File
