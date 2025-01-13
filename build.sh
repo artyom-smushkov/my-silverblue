@@ -20,7 +20,8 @@ dnf install foot stow podman-compose syncthing rofi-wayland swww qtile qtile-way
 dnf install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter
 dnf install gnome-keyring
 dnf install mozilla-fira-sans-fonts
-dnf install xorg-x11-server-Xorg
+# base-x group 
+dnf install xorg-x11-server-Xorg glx-utils mesa-dri-drivers mesa-vulkan-drivers plymouth-system-theme xorg-x11-drv-amdgpu xorg-x11-drv-ati xorg-x11-drv-intel xorg-x11-drv-evdev xorg-x11-drv-libinput xorg-x11-xauth xorg-x11-xinit
 # dnf override remove solaar
 
 #### Example for enabling a System Unit File
