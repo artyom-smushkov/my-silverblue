@@ -11,7 +11,7 @@ fm.reaper.Reaper
 org.gnome.Boxes
 org.mozilla.Thunderbird
 org.kde.kid3
-io.github.zen_browser.zen
+app.zen_browser.zen
 com.brave.Browser
 io.mpv.Mpv
 com.spotify.Client
