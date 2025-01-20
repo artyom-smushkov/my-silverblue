@@ -23,6 +23,7 @@ dnf install mozilla-fira-sans-fonts
 # base-x group 
 dnf install xorg-x11-server-Xorg glx-utils mesa-dri-drivers mesa-vulkan-drivers plymouth-system-theme xorg-x11-drv-amdgpu xorg-x11-drv-ati xorg-x11-drv-intel xorg-x11-drv-evdev xorg-x11-drv-libinput xorg-x11-xauth xorg-x11-xinit
 dnf install picom xrandr alacritty xset
+dnf install nodejs nodejs-npm
 
 #### Example for enabling a System Unit File
 
