@@ -12,18 +12,16 @@ install -o 0 -g 0 -m644 docker-ce.repo /etc/yum.repos.d/docker-ce.repo
 install -o 0 -g 0 -m644 mullvad.repo /etc/yum.repos.d/mullvad.repo
 install -o 0 -g 0 -m644 alebastr-sway-extras-fedora-41.repo /etc/yum.repos.d/alebastr-sway-extras-fedora-41.repo
 install -o 0 -g 0 -m644 erikreider-SwayNotificationCenter-fedora-41.repo /etc/yum.repos.d/erikreider-SwayNotificationCenter-fedora-41.repo
-dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 ### Install packages
 
-dnf install foot stow podman-compose syncthing rofi-wayland swww qtile qtile-wayland qtile-extras xdg-desktop-portal-wlr swappy waybar emacs fish
-dnf install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter
-dnf install gnome-keyring
-dnf install mozilla-fira-sans-fonts
-# base-x group 
-dnf install xorg-x11-server-Xorg glx-utils mesa-dri-drivers mesa-vulkan-drivers plymouth-system-theme xorg-x11-drv-amdgpu xorg-x11-drv-ati xorg-x11-drv-intel xorg-x11-drv-evdev xorg-x11-drv-libinput xorg-x11-xauth xorg-x11-xinit
-dnf install picom xrandr alacritty xset
-dnf install nodejs nodejs-npm
+rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww xdg-desktop-portal-wlr swappy waybar emacs fish
+rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter
+rpm-ostree install gnome-keyring
+rpm-ostree install mozilla-fira-sans-fonts
+
+rpm-ostree override remove firefox firefox-langpacks
 
 #### Example for enabling a System Unit File
 
