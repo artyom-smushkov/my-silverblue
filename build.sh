@@ -15,7 +15,6 @@ install -o 0 -g 0 -m644 alebastr-sway-extras-fedora-41.repo /etc/yum.repos.d/ale
 install -o 0 -g 0 -m644 erikreider-SwayNotificationCenter-fedora-41.repo /etc/yum.repos.d/erikreider-SwayNotificationCenter-fedora-41.repo
 install -o 0 -g 0 -m644 solopasha-hyprland-fedora-41.repo /etc/yum.repos.d/solopasha-hyprland-fedora-41.repo
 
-rpm-ostree install code
 rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 ### Install packages
