@@ -16,26 +16,3 @@ install -o 0 -g 0 -m644 alebastr-sway-extras-fedora-41.repo /etc/yum.repos.d/ale
 install -o 0 -g 0 -m644 erikreider-SwayNotificationCenter-fedora-41.repo /etc/yum.repos.d/erikreider-SwayNotificationCenter-fedora-41.repo
 install -o 0 -g 0 -m644 solopasha-hyprland-fedora-41.repo /etc/yum.repos.d/solopasha-hyprland-fedora-41.repo
 install -o 0 -g 0 -m644 bhavin192-emacs-pretest-fedora-41.repo /etc/yum.repos.d/bhavin192-emacs-pretest-fedora-41.repo
-
-rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww xdg-desktop-portal-wlr swappy waybar emacs fish
-rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter
-rpm-ostree install gnome-keyring
-rpm-ostree install mozilla-fira-sans-fonts
-rpm-ostree install hipblas-devel hipblaslt-devel hipcc hipcub-devel hipfft-devel hiprand-devel hipsolver-devel hipsparse-devel rocalution-devel rocblas-devel rocfft-devel rocm-cmake rocm-comgr-devel rocm-core-devel rocm-hip-devel rocm-llvm-devel rocm-runtime-devel rocm-smi-devel rocminfo rocprim-devel rocrand-devel rocsolver-devel rocsparse-devel roctracer-devel miopen
-
-rpm-ostree override remove firefox firefox-langpacks
-
-systemctl enable podman.socket
-systemctl enable docker.service
-systemctl enable brew-setup.service
-
-# Make these so brew script will work
-mkdir -p /var/home
-mkdir -p /var/roothome
-
-curl --retry 3 -Lo /tmp/brew-install https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-chmod +x /tmp/brew-install
-/tmp/brew-install
-tar --zstd -cvf /usr/share/homebrew.tar.zst /home/linuxbrew/.linuxbrew

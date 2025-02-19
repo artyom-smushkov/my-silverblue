@@ -52,10 +52,27 @@ COPY system-files /tmp/system-files
 RUN rsync -rvK /tmp/system-files/ / && \
     ostree container commit
 
-COPY build.sh /tmp/build.sh
+COPY add_repositories.sh /tmp/add_repositories.sh
 
 RUN mkdir -p /var/lib/alternatives && \
-    /tmp/build.sh && \
+    /tmp/add_repositories.sh && \
+    ostree container commit
+
+
+RUN rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && ostree container commit
+
+RUN rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww xdg-desktop-portal-wlr swappy waybar emacs fish && ostree container commit
+RUN rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter && ostree container commit
+RUN rpm-ostree install gnome-keyring && ostree container commit
+RUN rpm-ostree install mozilla-fira-sans-fonts && ostree container commit
+RUN rpm-ostree install hipblas-devel hipblaslt-devel hipcc hipcub-devel hipfft-devel hiprand-devel hipsolver-devel hipsparse-devel rocalution-devel rocblas-devel rocfft-devel rocm-cmake rocm-comgr-devel rocm-core-devel rocm-hip-devel rocm-llvm-devel rocm-runtime-devel rocm-smi-devel rocminfo rocprim-devel rocrand-devel rocsolver-devel rocsparse-devel roctracer-devel miopen && ostree container commit
+
+COPY setup_services.sh /tmp/setup_services.sh
+RUN /tmp/setup_services.sh && \
+    ostree container commit
+
+COPY install_brew.sh /tmp/install_brew.sh
+RUN /tmp/install_brew.sh && \
     ostree container commit
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
