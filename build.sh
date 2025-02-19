@@ -19,8 +19,6 @@ install -o 0 -g 0 -m644 bhavin192-emacs-pretest-fedora-41.repo /etc/yum.repos.d/
 
 rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-### Install packages
-
 rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww xdg-desktop-portal-wlr swappy waybar emacs fish
 rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter
 rpm-ostree install gnome-keyring
@@ -29,17 +27,14 @@ rpm-ostree install hipblas-devel hipblaslt-devel hipcc hipcub-devel hipfft-devel
 
 rpm-ostree override remove firefox firefox-langpacks
 
-#### Example for enabling a System Unit File
-
 systemctl enable podman.socket
 systemctl enable docker.service
 systemctl enable brew-setup.service
 
-# Make these so script will work
+# Make these so brew script will work
 mkdir -p /var/home
 mkdir -p /var/roothome
 
-# Brew Install Script
 curl --retry 3 -Lo /tmp/brew-install https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 chmod +x /tmp/brew-install
 /tmp/brew-install
