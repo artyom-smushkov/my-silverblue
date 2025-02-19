@@ -65,7 +65,7 @@ RUN rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww xdg-
 RUN rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter && ostree container commit
 RUN rpm-ostree install gnome-keyring && ostree container commit
 RUN rpm-ostree install mozilla-fira-sans-fonts && ostree container commit
-RUN rpm-ostree install hipblas-devel hipblaslt-devel hipcc hipcub-devel hipfft-devel hiprand-devel hipsolver-devel hipsparse-devel rocalution-devel rocblas-devel rocfft-devel rocm-cmake rocm-comgr-devel rocm-core-devel rocm-hip-devel rocm-llvm-devel rocm-runtime-devel rocm-smi-devel rocminfo rocprim-devel rocrand-devel rocsolver-devel rocsparse-devel roctracer-devel miopen && ostree container commit
+# RUN rpm-ostree install hipblas-devel hipblaslt-devel hipcc hipcub-devel hipfft-devel hiprand-devel hipsolver-devel hipsparse-devel rocalution-devel rocblas-devel rocfft-devel rocm-cmake rocm-comgr-devel rocm-core-devel rocm-hip-devel rocm-llvm-devel rocm-runtime-devel rocm-smi-devel rocminfo rocprim-devel rocrand-devel rocsolver-devel rocsparse-devel roctracer-devel miopen && ostree container commit
 
 COPY setup_services.sh /tmp/setup_services.sh
 RUN /tmp/setup_services.sh && \
