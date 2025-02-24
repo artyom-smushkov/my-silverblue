@@ -9,7 +9,6 @@ org.darktable.Darktable
 org.rncbc.qpwgraph
 fm.reaper.Reaper
 org.gnome.Boxes
-io.missioncenter.MissionCenter
 org.mozilla.Thunderbird
 org.kde.kid3
 app.zen_browser.zen
