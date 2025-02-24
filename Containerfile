@@ -58,15 +58,6 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/add_repositories.sh && \
     ostree container commit
 
-
-RUN rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && ostree container commit
-
-RUN rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww xdg-desktop-portal-wlr swappy waybar emacs fish && ostree container commit
-RUN rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter && ostree container commit
-RUN rpm-ostree install gnome-keyring && ostree container commit
-RUN rpm-ostree install mozilla-fira-sans-fonts && ostree container commit
-RUN rpm-ostree install rocminfo rocm-clinfo rocm-opencl rocm-hip
-
 COPY setup_services.sh /tmp/setup_services.sh
 RUN /tmp/setup_services.sh && \
     ostree container commit
@@ -78,3 +69,11 @@ RUN /tmp/install_brew.sh && \
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
+
+RUN rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && ostree container commit
+RUN rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww xdg-desktop-portal-wlr swappy waybar emacs fish && ostree container commit
+RUN rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter && ostree container commit
+RUN rpm-ostree install gnome-keyring && ostree container commit
+RUN rpm-ostree install mozilla-fira-sans-fonts && ostree container commit
+RUN rpm-ostree install rocminfo rocm-clinfo rocm-opencl rocm-hip
+RUN rpm-ostree install lact
