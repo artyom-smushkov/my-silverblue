@@ -58,10 +58,6 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/add_repositories.sh && \
     ostree container commit
 
-COPY setup_services.sh /tmp/setup_services.sh
-RUN /tmp/setup_services.sh && \
-    ostree container commit
-
 COPY install_brew.sh /tmp/install_brew.sh
 RUN /tmp/install_brew.sh && \
     ostree container commit
@@ -77,3 +73,7 @@ RUN rpm-ostree install gnome-keyring && ostree container commit
 RUN rpm-ostree install mozilla-fira-sans-fonts && ostree container commit
 RUN rpm-ostree install rocminfo rocm-clinfo rocm-opencl rocm-hip
 RUN rpm-ostree install lact
+
+COPY setup_services.sh /tmp/setup_services.sh
+RUN /tmp/setup_services.sh && \
+    ostree container commit
