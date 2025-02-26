@@ -71,8 +71,8 @@ RUN rpm-ostree install foot stow podman-compose syncthing rofi-wayland swww xdg-
 RUN rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-hyprland SwayNotificationCenter && ostree container commit
 RUN rpm-ostree install gnome-keyring && ostree container commit
 RUN rpm-ostree install mozilla-fira-sans-fonts && ostree container commit
-RUN rpm-ostree install lact
-RUN rpm-ostree install qtile qtile-wayland qtile-extras
+RUN rpm-ostree install lact && ostree container commit
+RUN rpm-ostree install qtile qtile-wayland qtile-extras && ostree container commit
 
 COPY setup_services.sh /tmp/setup_services.sh
 RUN /tmp/setup_services.sh && \

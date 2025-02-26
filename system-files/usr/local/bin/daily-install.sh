@@ -13,7 +13,6 @@ org.mozilla.Thunderbird
 org.kde.kid3
 app.zen_browser.zen
 com.brave.Browser
-com.vivaldi.Vivaldi
 io.mpv.Mpv
 com.spotify.Client
 org.pulseaudio.pavucontrol
