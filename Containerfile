@@ -74,11 +74,6 @@ RUN rpm-ostree install mozilla-fira-sans-fonts && ostree container commit
 RUN rpm-ostree install lact && ostree container commit
 RUN rpm-ostree install xorg-x11-server-Xorg glx-utils mesa-dri-drivers mesa-vulkan-drivers plymouth-system-theme xorg-x11-drv-amdgpu xorg-x11-drv-ati xorg-x11-drv-intel xorg-x11-drv-evdev xorg-x11-drv-libinput xorg-x11-xauth xorg-x11-xinit && ostree container commit
 RUN rpm-ostree install picom xrandr && ostree container commit
-
-The Containerfile you've shared is building a custom Fedora Silverblue/Kinoite derivative image based on the "sericea" variant from ublue-os. The file:
-
-1. Uses build arguments to specify the source image (sericea-main:41)
-2.
 RUN rpm-ostree install qtile qtile-wayland qtile-extras && ostree container commit
 
 COPY setup_services.sh /tmp/setup_services.sh
