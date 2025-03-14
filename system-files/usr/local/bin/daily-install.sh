@@ -10,6 +10,7 @@ org.rncbc.qpwgraph
 fm.reaper.Reaper
 org.gnome.Boxes
 org.mozilla.Thunderbird
+org.gnome.Geary
 org.kde.kid3
 app.zen_browser.zen
 com.brave.Browser
