@@ -36,3 +36,6 @@ rpm-ostree install mullvad-vpn
 
 xdg-mime default app.zen_browser.zen.desktop x-scheme-handler/https
 xdg-mime default app.zen_browser.zen.desktop x-scheme-handler/http
+
+git config --global user.email "artyom.smushkov@gmail.com"
+git config --global user.name "Artem Smushkov"

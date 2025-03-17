@@ -40,3 +40,7 @@ for app in $CURRENT_FLATPAK_PROGRAMS; do
 	flatpak uninstall -y "${app}"
     fi
 done
+
+brew update
+brew bundle install --cleanup --file /var/home/templarrr/.config/brewfile/Brewfile --no-lock
+brew upgrade
