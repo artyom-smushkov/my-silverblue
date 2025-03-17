@@ -20,6 +20,7 @@ org.pulseaudio.pavucontrol
 org.mozilla.firefox
 org.tigervnc.vncviewer
 com.github.tchx84.Flatseal
+com.geeks3d.furmark
 org.audacityteam.Audacity"
 )
 

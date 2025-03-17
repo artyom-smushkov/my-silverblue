@@ -33,6 +33,7 @@ systemctl --user enable syncthing.service
 systemctl --user start syncthing.service
 
 rpm-ostree install mullvad-vpn
+systemctl enable mullvad-daemon.service
 
 xdg-mime default app.zen_browser.zen.desktop x-scheme-handler/https
 xdg-mime default app.zen_browser.zen.desktop x-scheme-handler/http
