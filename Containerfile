@@ -72,7 +72,7 @@ RUN rpm-ostree install hyprland hypridle hyprcursor hyprlock xdg-desktop-portal-
 RUN rpm-ostree install gnome-keyring && ostree container commit
 RUN rpm-ostree install mozilla-fira-sans-fonts && ostree container commit
 RUN rpm-ostree install lact && ostree container commit
-RUN rpm-ostree install xorg-x11-server-Xorg glx-utils mesa-dri-drivers mesa-vulkan-drivers plymouth-system-theme xorg-x11-drv-amdgpu xorg-x11-drv-ati xorg-x11-drv-intel xorg-x11-drv-evdev xorg-x11-drv-libinput xorg-x11-xauth xorg-x11-xinit xset && ostree container commit
+RUN rpm-ostree install xorg-x11-server-Xorg glx-utils mesa-dri-drivers mesa-vulkan-drivers plymouth-system-theme xorg-x11-drv-amdgpu xorg-x11-drv-ati xorg-x11-drv-intel xorg-x11-drv-evdev xorg-x11-drv-libinput xorg-x11-xauth xorg-x11-xinit xset xkill && ostree container commit
 RUN rpm-ostree install picom xrandr && ostree container commit
 RUN rpm-ostree install qtile qtile-wayland qtile-extras && ostree container commit
 RUN rpm-ostree install kernel-tools && ostree container commit
