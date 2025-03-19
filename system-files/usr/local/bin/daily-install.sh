@@ -13,6 +13,7 @@ org.mozilla.Thunderbird
 org.gnome.Geary
 org.kde.kid3
 app.zen_browser.zen
+com.vivaldi.Vivaldi
 com.brave.Browser
 io.mpv.Mpv
 com.spotify.Client
