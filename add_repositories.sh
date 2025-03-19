@@ -11,6 +11,7 @@ curl -O https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCente
 curl -O https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-41/solopasha-hyprland-fedora-41.repo
 curl -O https://copr.fedorainfracloud.org/coprs/bhavin192/emacs-pretest/repo/fedora-41/bhavin192-emacs-pretest-fedora-41.repo
 curl -O https://copr.fedorainfracloud.org/coprs/ilyaz/LACT/repo/fedora-41/ilyaz-LACT-fedora-41.repo
+curl -O https://copr.fedorainfracloud.org/coprs/codifryed/CoolerControl/repo/fedora-41/codifryed-CoolerControl-fedora-41.repo
 
 install -o 0 -g 0 -m644 docker-ce.repo /etc/yum.repos.d/docker-ce.repo
 install -o 0 -g 0 -m644 mullvad.repo /etc/yum.repos.d/mullvad.repo
@@ -19,3 +20,4 @@ install -o 0 -g 0 -m644 erikreider-SwayNotificationCenter-fedora-41.repo /etc/yu
 install -o 0 -g 0 -m644 solopasha-hyprland-fedora-41.repo /etc/yum.repos.d/solopasha-hyprland-fedora-41.repo
 install -o 0 -g 0 -m644 bhavin192-emacs-pretest-fedora-41.repo /etc/yum.repos.d/bhavin192-emacs-pretest-fedora-41.repo
 install -o 0 -g 0 -m644 ilyaz-LACT-fedora-41.repo /etc/yum.repos.d/ilyaz-LACT-fedora-41.repo 
+install -o 0 -g 0 -m644 codifryed-CoolerControl-fedora-41.repo /etc/yum.repos.d/codifryed-CoolerControl-fedora-41.repo
