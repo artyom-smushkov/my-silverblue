@@ -22,6 +22,7 @@ org.mozilla.firefox
 org.tigervnc.vncviewer
 com.github.tchx84.Flatseal
 com.geeks3d.furmark
+com.valvesoftware.Steam
 org.audacityteam.Audacity"
 )
 
