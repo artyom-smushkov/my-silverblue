@@ -15,10 +15,6 @@ cd ~/Dotfiles
 stow --adopt .
 git restore .
 
-cd ~/Distroboxes
-distrobox assemble create --file opensuse.ini
-distrobox assemble create --file bazzite.ini
-
 cd ~
 
 git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/piiq-dev.git /home/templarrr/Development/piiq-dev-containers
