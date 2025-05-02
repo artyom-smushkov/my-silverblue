@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DESIRED_FLATPAKS_PROGRAMS=$(
-echo "com.bitwarden.desktop
+echo "me.proton.Pass
 com.slack.Slack
 org.telegram.desktop
 com.anydesk.Anydesk
