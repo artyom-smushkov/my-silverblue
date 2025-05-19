@@ -2,6 +2,7 @@
 
 DESIRED_FLATPAKS_PROGRAMS=$(
 echo "me.proton.Pass
+com.protonvpn.www
 com.slack.Slack
 org.telegram.desktop
 com.anydesk.Anydesk
