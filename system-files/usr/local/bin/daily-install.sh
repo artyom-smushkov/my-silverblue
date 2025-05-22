@@ -9,6 +9,7 @@ com.anydesk.Anydesk
 org.darktable.Darktable
 org.rncbc.qpwgraph
 fm.reaper.Reaper
+org.ardour.Ardour
 org.gnome.Boxes
 org.mozilla.Thunderbird
 org.gnome.Geary
