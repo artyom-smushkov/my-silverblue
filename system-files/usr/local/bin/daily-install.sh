@@ -10,6 +10,7 @@ org.darktable.Darktable
 org.rncbc.qpwgraph
 fm.reaper.Reaper
 org.ardour.Ardour
+org.guitarix.Guitarix
 org.gnome.Boxes
 org.mozilla.Thunderbird
 org.gnome.Geary
