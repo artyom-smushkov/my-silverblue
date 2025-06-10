@@ -11,6 +11,7 @@ curl -O https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-4
 # curl -O https://copr.fedorainfracloud.org/coprs/bhavin192/emacs-pretest/repo/fedora-42/bhavin192-emacs-pretest-fedora-42.repo
 curl -O https://copr.fedorainfracloud.org/coprs/ilyaz/LACT/repo/fedora-42/ilyaz-LACT-fedora-42.repo
 curl -O https://copr.fedorainfracloud.org/coprs/codifryed/CoolerControl/repo/fedora-42/codifryed-CoolerControl-fedora-42.repo
+curl -O https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-42/yalter-niri-fedora-42.repo
 
 install -o 0 -g 0 -m644 docker-ce.repo /etc/yum.repos.d/docker-ce.repo
 install -o 0 -g 0 -m644 alebastr-sway-extras-fedora-42.repo /etc/yum.repos.d/alebastr-sway-extras-fedora-42.repo
@@ -19,3 +20,4 @@ install -o 0 -g 0 -m644 solopasha-hyprland-fedora-42.repo /etc/yum.repos.d/solop
 # install -o 0 -g 0 -m644 bhavin192-emacs-pretest-fedora-42.repo /etc/yum.repos.d/bhavin192-emacs-pretest-fedora-42.repo
 install -o 0 -g 0 -m644 ilyaz-LACT-fedora-42.repo /etc/yum.repos.d/ilyaz-LACT-fedora-42.repo 
 install -o 0 -g 0 -m644 codifryed-CoolerControl-fedora-42.repo /etc/yum.repos.d/codifryed-CoolerControl-fedora-42.repo
+install -o 0 -g 0 -m644 yalter-niri-fedora-42.repo /etc/yum.repos.d/yalter-niri-fedora-42.repo

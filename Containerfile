@@ -76,7 +76,7 @@ RUN rpm-ostree install xorg-x11-server-Xorg glx-utils mesa-dri-drivers mesa-vulk
 RUN rpm-ostree install picom xrandr && ostree container commit
 RUN rpm-ostree install qtile qtile-wayland qtile-extras && ostree container commit
 RUN rpm-ostree install kernel-tools && ostree container commit
-RUN rpm-ostree install coolercontrol lm_sensors && ostree container commit
+RUN rpm-ostree install niri
 
 COPY setup_services.sh /tmp/setup_services.sh
 RUN /tmp/setup_services.sh && \
