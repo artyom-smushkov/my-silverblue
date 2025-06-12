@@ -7,7 +7,7 @@ com.slack.Slack
 org.telegram.desktop
 com.anydesk.Anydesk
 org.darktable.Darktable
-org.rncbc.qpwgraph
+org.pipewire.Helvum
 fm.reaper.Reaper
 org.ardour.Ardour
 org.guitarix.Guitarix

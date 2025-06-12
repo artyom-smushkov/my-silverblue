@@ -77,7 +77,6 @@ RUN rpm-ostree install picom xrandr && ostree container commit
 RUN rpm-ostree install qtile qtile-wayland qtile-extras && ostree container commit
 RUN rpm-ostree install kernel-tools && ostree container commit
 RUN rpm-ostree install gamescope niri xwayland-satellite && ostree container commit
-RUN rpm-ostree install qt5ct qt6ct darkly && ostree container commit
 
 COPY setup_services.sh /tmp/setup_services.sh
 RUN /tmp/setup_services.sh && \
