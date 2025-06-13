@@ -26,7 +26,6 @@ org.tigervnc.vncviewer
 com.github.tchx84.Flatseal
 com.geeks3d.furmark
 com.valvesoftware.Steam
-org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08
 org.audacityteam.Audacity"
 )
 
