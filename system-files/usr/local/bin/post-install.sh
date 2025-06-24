@@ -17,6 +17,8 @@ git restore .
 
 cd ~
 
+distrobox assemble create --file .config/distrobox/assemble.ini
+
 git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/piiq-dev.git /home/templarrr/Development/piiq-dev-containers
 git clone https://artyom-smushkov:${GITHUB_PASSWORD}@github.com/artyom-smushkov/my-silverblue.git /home/templarrr/Development/my-silverblue
 

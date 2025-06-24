@@ -71,7 +71,6 @@ RUN rpm-ostree install foot stow podman-compose syncthing swww xdg-desktop-porta
 RUN rpm-ostree install hypridle hyprlock SwayNotificationCenter && ostree container commit
 RUN rpm-ostree install gnome-keyring xdg-desktop-portal-gnome && ostree container commit
 RUN rpm-ostree install mozilla-fira-sans-fonts mozilla-fira-fonts-common && ostree container commit
-RUN rpm-ostree install lact && ostree container commit
 RUN rpm-ostree install kernel-tools && ostree container commit
 RUN rpm-ostree install gamescope niri xwayland-satellite wofi && ostree container commit
 
