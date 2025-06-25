@@ -10,9 +10,9 @@ org.darktable.Darktable
 fm.reaper.Reaper
 org.ardour.Ardour
 org.guitarix.Guitarix
+org.rncbc.qpwgraph
 org.gnome.Boxes
 org.mozilla.Thunderbird
-org.gnome.Geary
 org.kde.kid3
 app.zen_browser.zen
 com.vivaldi.Vivaldi
