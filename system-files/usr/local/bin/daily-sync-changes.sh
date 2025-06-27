@@ -2,6 +2,6 @@
 
 cd ~/Dotfiles
 git pull
-stow .
+stow . --no-folding
 
 daily-install.sh

@@ -45,6 +45,4 @@ for app in $CURRENT_FLATPAK_PROGRAMS; do
     fi
 done
 
-brew update
-brew bundle install --cleanup --file /var/home/templarrr/.config/brewfile/Brewfile --no-lock
-brew upgrade
+brew bundle install --file /var/home/templarrr/.config/brewfile/Brewfile --cleanup --upgrade --upgrade-formulae

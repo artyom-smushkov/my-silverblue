@@ -67,7 +67,7 @@ RUN /tmp/install_brew.sh && \
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
 
 RUN rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && ostree container commit
-RUN rpm-ostree install foot stow podman-compose syncthing swww xdg-desktop-portal-wlr swappy waybar emacs fish && ostree container commit
+RUN rpm-ostree install foot stow podman-compose syncthing swww xdg-desktop-portal-wlr swappy waybar emacs && ostree container commit
 RUN rpm-ostree install hypridle hyprlock SwayNotificationCenter && ostree container commit
 RUN rpm-ostree install gnome-keyring xdg-desktop-portal-gnome && ostree container commit
 RUN rpm-ostree install mozilla-fira-sans-fonts mozilla-fira-fonts-common && ostree container commit
