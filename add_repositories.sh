@@ -13,5 +13,3 @@ install -o 0 -g 0 -m644 docker-ce.repo /etc/yum.repos.d/docker-ce.repo
 install -o 0 -g 0 -m644 alebastr-sway-extras-fedora-42.repo /etc/yum.repos.d/alebastr-sway-extras-fedora-42.repo
 install -o 0 -g 0 -m644 erikreider-SwayNotificationCenter-fedora-42.repo /etc/yum.repos.d/erikreider-SwayNotificationCenter-fedora-42.repo
 install -o 0 -g 0 -m644 solopasha-hyprland-fedora-42.repo /etc/yum.repos.d/solopasha-hyprland-fedora-42.repo
-
-rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
