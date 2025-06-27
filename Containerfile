@@ -73,6 +73,7 @@ RUN rpm-ostree install gnome-keyring xdg-desktop-portal-gnome && ostree containe
 RUN rpm-ostree install mozilla-fira-sans-fonts mozilla-fira-fonts-common && ostree container commit
 RUN rpm-ostree install kernel-tools && ostree container commit
 RUN rpm-ostree install niri xwayland-satellite wofi && ostree container commit
+RUN rpm-ostree install VirtualBox VirtualBox-kmod && ostree container commit
 
 COPY setup_services.sh /tmp/setup_services.sh
 RUN /tmp/setup_services.sh && \
