@@ -72,7 +72,7 @@ RUN rpm-ostree install hypridle hyprlock SwayNotificationCenter && ostree contai
 RUN rpm-ostree install gnome-keyring xdg-desktop-portal-gnome && ostree container commit
 RUN rpm-ostree install mozilla-fira-sans-fonts mozilla-fira-fonts-common && ostree container commit
 RUN rpm-ostree install kernel-tools && ostree container commit
-RUN rpm-ostree install niri xwayland-satellite wofi && ostree container commit
+RUN rpm-ostree install gamescope niri xwayland-satellite wofi && ostree container commit
 
 COPY setup_services.sh /tmp/setup_services.sh
 RUN /tmp/setup_services.sh && \
