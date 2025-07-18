@@ -16,6 +16,7 @@ org.gnome.Connections
 org.gnome.Contacts
 org.gnome.FileRoller
 org.gnome.Firmware
+org.gnome.Geary
 org.gnome.Logs
 org.gnome.Loupe
 org.gnome.Maps
