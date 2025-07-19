@@ -74,6 +74,7 @@ RUN rpm-ostree install mozilla-fira-sans-fonts mozilla-fira-fonts-common && ostr
 RUN rpm-ostree install kernel-tools && ostree container commit
 RUN rpm-ostree install nemo && ostree container commit
 RUN rpm-ostree install nwg-panel python3-requests niri xwayland-satellite wofi && ostree container commit
+RUN rpm-ostree install adw-gtk3-theme && ostree container commit
 
 COPY setup_services.sh /tmp/setup_services.sh
 RUN /tmp/setup_services.sh && \
