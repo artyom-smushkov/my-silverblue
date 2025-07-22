@@ -33,7 +33,7 @@ ARG SOURCE_IMAGE="bluefin"
 # - stable-zfs
 # - stable-nvidia-zfs
 # - (and the above with testing rather than stable)
-ARG SOURCE_SUFFIX=""
+ARG SOURCE_SUFFIX="dx"
 
 ## SOURCE_TAG arg must be a version built for the specific image: eg, 39, 40, gts, latest
 ARG SOURCE_TAG="stable"
@@ -66,7 +66,7 @@ RUN /tmp/install_brew.sh && \
 # - All RUN commands must end with ostree container commit
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
 
-RUN rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && ostree container commit
+# RUN rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && ostree container commit
 RUN rpm-ostree install foot stow podman-compose syncthing swww xdg-desktop-portal-wlr swappy waybar emacs && ostree container commit
 RUN rpm-ostree install hypridle hyprlock SwayNotificationCenter && ostree container commit
 RUN rpm-ostree install gnome-keyring xdg-desktop-portal-gnome && ostree container commit
