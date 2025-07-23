@@ -52,10 +52,6 @@ COPY system-files /tmp/system-files
 RUN rsync -rvK /tmp/system-files/ / && \
     ostree container commit
 
-RUN mkdir -p /var/lib/alternatives && \
-    /tmp/add_repositories.sh && \
-    ostree container commit
-
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
