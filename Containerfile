@@ -57,7 +57,7 @@ RUN rsync -rvK /tmp/system-files/ / && \
 # - All RUN commands must end with ostree container commit
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
 
-RUN rpm-ostree install foot stow syncthing emacs mozilla-fira-sans-fonts mozilla-fira-fonts-common adw-gtk3-theme ollama && ostree container commit
+RUN rpm-ostree install foot stow syncthing emacs mozilla-fira-sans-fonts mozilla-fira-fonts-common adw-gtk3-theme && ostree container commit
 
 COPY setup_services.sh /tmp/setup_services.sh
 RUN /tmp/setup_services.sh && \
