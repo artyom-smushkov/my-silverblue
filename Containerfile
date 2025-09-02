@@ -72,7 +72,7 @@ RUN rpm-ostree install hyprland hypridle hyprlock SwayNotificationCenter && ostr
 RUN rpm-ostree install gnome-keyring xdg-desktop-portal-gnome && ostree container commit
 RUN rpm-ostree install mozilla-fira-sans-fonts mozilla-fira-fonts-common && ostree container commit
 RUN rpm-ostree install kernel-tools && ostree container commit
-RUN rpm-ostree install niri nautilus xwayland-satellite wofi && ostree container commit
+RUN rpm-ostree install niri nautilus xwayland-satellite wofi adw-gtk3-theme && ostree container commit
 # RUN rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos && ostree container commit
 # RUN rpm-ostree cliwrap install-to-root && ostree container commit
 RUN rpm-ostree override remove kernel kernel-{core,modules,modules-extra} --install kernel-longterm --install kernel-longterm-core --install kernel-longterm-modules --install kernel-longterm-modules-extra && ostree container commit
